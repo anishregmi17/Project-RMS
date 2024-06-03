@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Management;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category; // Corrected namespace
+
 
 class CategoryController extends Controller
 {
@@ -12,7 +14,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('management.category');
+        // to retrive category data from database
+        $categories = Category::paginate(5);
+        return view('management.category')->with('categories', $categories);
     }
 
     /**
@@ -28,7 +32,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:categories|max:255'
+        ]);
+        $category = new Category;
+        $category->name = $request->name;
+        $category->save();
+        $request->session()->flash('status', $request->name. " is save successfully");
+        return(redirect('/management/category'));
     }
 
     /**
