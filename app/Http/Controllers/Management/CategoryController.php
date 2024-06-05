@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         // to retrive category data from database
-        $categories = Category::paginate(5);
+        $categories = Category::cursorPaginate(10);
         return view('management.category')->with('categories', $categories);
     }
 
