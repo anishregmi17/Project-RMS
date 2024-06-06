@@ -3,6 +3,9 @@
 @section('content')
   <div class="container">
     <div class="row justify-content-center">
+
+        {{-- @include('management.inc.sidebar') --}}
+
       <div class="col-md-4">
         <div class="list-group">
             <a href="/management/category" class="list-group-item list-group-item-action">
@@ -52,7 +55,7 @@
                     @method('DELETE')
                     <input type="submit" value="Delete" class="btn btn-danger">
                   </form>
-                  
+
                   </td>
                 </tr>
               @endforeach
