@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Management\CategoryController; // Ensure the namespace is correct
+use App\Http\Controllers\Management\menuController; // Ensure the namespace is correct
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,6 @@ Route::get('/management', function () {
 
 // Resource routes for the category in management
 Route::resource('management/category', CategoryController::class);
+
+Route::resource('management/menu', MenuController::class);
+
