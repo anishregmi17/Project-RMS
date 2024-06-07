@@ -48,15 +48,15 @@
             <input type="text" name="description" class="form-control" placeholder="Description...">
           </div>
 
-          {{-- <div class="form-group">
+          <div class="form-group">
             <label for="Category">Category</label>
             <select class="form-control" name="category_id">
-              @foreach ($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
+              {{-- @foreach ($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option> --}}
 
-              @endforeach
+              {{-- @endforeach --}}
             </select>
-          </div> --}}
+          </div>
 
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
