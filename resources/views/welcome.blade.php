@@ -12,10 +12,9 @@
 
         <!-- Styles -->
         <style>
-            /* Tailwind CSS v3.2.4 | MIT License | https://tailwindcss.com */
             body {
                 font-family: 'Figtree', sans-serif;
-                background-color: #c4c3c3;
+                background-color: #f4f4f4;
                 margin: 0;
                 padding: 0;
             }
@@ -23,9 +22,9 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 1em;
+                padding: 1em 2em;
                 background-color: #ffffff;
-                color: #594a40;
+                color: #333;
                 position: fixed;
                 width: 100%;
                 top: 0;
@@ -33,71 +32,82 @@
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
             .navbar a {
-                color: #594a40;
+                color: #333;
                 text-decoration: none;
                 margin: 0 1em;
+                font-weight: 600;
+            }
+            .navbar a:hover {
+                color: #e67e22;
+            }
+            .navbar img {
+                height: 50px;
+                width: auto;
             }
             .hero {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                min-height: 80vh;
-                background: url('https://source.unsplash.com/1600x900/?restaurant') no-repeat center center/cover;
-                color: #bf6969;
-                font-family: 'Figtree', sans-serif;
+                min-height: 100vh;
+                background: url('https://source.unsplash.com/1600x900/?gourmet-food') no-repeat center center/cover;
+                color: #fff;
                 padding: 2em;
                 margin-top: 60px;
+                box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
             }
             .hero h1 {
-                font-size: 3em;
-                text-shadow: 2px 2px 5px #000;
+                font-size: 4em;
+                margin-bottom: 0.5em;
             }
             .hero p {
                 font-size: 1.5em;
                 margin-top: 1em;
-                text-shadow: 1px 1px 3px #000;
-            }
-
-            .content h2 {
-                color: #594a40;
-                text-align: center;
-                margin-bottom: 1em;
-            }
-            .content p {
-                color: #594a40;
-                margin-bottom: 1em;
-            }
-            .content ul {
-                list-style-type: disc;
-                padding-left: 20px;
-                color: #594a40;
             }
             .footer {
                 text-align: center;
                 padding: 1em;
-                background-color: #ffffff;
-                color: #594a40;
+                background-color: #333;
+                color: #fff;
                 position: fixed;
                 width: 100%;
                 bottom: 0;
                 box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            }
+            .footer p {
+                margin: 0;
+            }
+            .btn-primary {
+                padding: 10px 20px;
+                background-color: #e67e22;
+                color: #ffffff;
+                border-radius: 5px;
+                text-decoration: none;
+                margin: 5px;
+                display: inline-block;
+                font-weight: 600;
+            }
+            .btn-primary:hover {
+                background-color: #d35400;
             }
         </style>
     </head>
     <body class="antialiased">
         <div class="navbar">
             <div class="logo">
-                <a href="#">PNC Food Park</a>
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('images/logo.png') }}" alt="PNC Food Park Logo">
+                </a>
             </div>
             <div class="auth-links">
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/home') }}">Enter to Management System</a>
+                        <a href="{{ url('/home') }}" class="btn-primary">Enter to Management System</a>
                     @else
-                    <a href="{{ route('login') }}" style="padding: 10px 20px; background-color: #594a40; color: #ffffff; border-radius: 5px; text-decoration: none;">Log in</a>
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}" style="padding: 10px 20px; background-color: #fbbd61; color: #ffffff; border-radius: 5px; text-decoration: none; margin-left: 10px;">Register</a>                        @endif
+                        <a href="{{ route('login') }}" class="btn-primary">Log in</a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="btn-primary">Register</a>
+                        @endif
                     @endauth
                 @endif
             </div>
@@ -110,9 +120,8 @@
             </div>
         </div>
 
-
         <div class="footer">
-            &copy; 2024 PNC Food Park. All rights reserved.
+            <p>&copy; 2024 PNC Food Park. All rights reserved.</p>
         </div>
     </body>
 </html>
