@@ -1,10 +1,10 @@
 <?php
-
 namespace App\Http\Controllers\Management;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Menu;
+use App\Models\Category;
+use App\Models\Menu;
 
 class MenuController extends Controller
 {
@@ -21,7 +21,8 @@ class MenuController extends Controller
      */
     public function create(): \Illuminate\View\View
     {
-        return view('management.createmenu');
+        $categories = Category::all();
+        return view('management.createmenu', compact('categories'));
     }
 
     /**
@@ -44,7 +45,7 @@ class MenuController extends Controller
 
         $request->session()->flash('status', __(':name is saved successfully', ['name' => $request->name]));
 
-        return redirect()->route('management.menu.index');
+        return(redirect('/management/menu'));
     }
 
     /**
