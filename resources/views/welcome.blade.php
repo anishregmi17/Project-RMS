@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>PNC Food Park Restaurant Management System</title>
+        <title>RMS</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -115,13 +115,13 @@
 
         <div class="hero">
             <div>
-                <h1>Welcome to PNC Food Park</h1>
+                <h1>Welcome to RMS</h1>
                 <p>Experience the best dining with our top-notch services and gourmet dishes.</p>
             </div>
         </div>
 
         <div class="footer">
-            <p>&copy; 2024 PNC Food Park. All rights reserve</p>
+            <p>&copy; 2024 RMS. All rights reserve</p>
         </div>
     </body>
 </html>

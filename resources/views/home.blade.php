@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card mt-5" style="box-shadow: 0 10px 20px rgba(0,0,0,0.15); border-radius: 15px; overflow: hidden;">
                 <div class="card-header" style="background: linear-gradient(90deg, #ff7e5f, #feb47b); color: white; text-align: center; font-size: 1.8em; padding: 1rem;">
-                    {{ __('PNC FOOD PARK MANAGEMENT SYSTEM') }}
+                    {{ __('RMS') }}
                 </div>
 
                 <div class="card-body">
@@ -17,7 +17,7 @@
                     @endif
 
                     <div class="text-center mb-4" style="font-size: 1.2em; color: #555; line-height: 1.5;">
-                        <p>Welcome to the PNC Food Park Management System. Elevate your restaurant operations with our state-of-the-art management tools. Streamline workflows, enhance customer experiences, and gain actionable insights.</p>
+                        <p>Welcome to the RMS. Elevate your restaurant operations with our state-of-the-art management tools. Streamline workflows, enhance customer experiences, and gain actionable insights.</p>
                     </div>
 
                     <div class="row text-center" style="margin-top: 2rem;">
