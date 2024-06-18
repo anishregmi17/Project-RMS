@@ -39,4 +39,7 @@ Route::resource('management/menu', MenuController::class);
 
 Route::resource('management/table', TableController::class);
 
+Route::get('/cashier', function () {
+    return view('cashier.index');
+});
 
