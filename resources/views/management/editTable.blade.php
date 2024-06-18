@@ -23,7 +23,7 @@
             <label for="tableName">Table Name</label>
             <input type="text" name="name" value="{{$table->name}}" class="form-control" placeholder="Table...">
           </div>
-          <button type="submit" class="btn btn-warning">Edit</button>
+          <button type="submit" class="btn btn-warning">Save</button>
         </form>
       </div>
     </div>
