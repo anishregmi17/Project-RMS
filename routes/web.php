@@ -43,3 +43,4 @@ Route::get('/cashier', function () {
     return view('cashier.index');
 });
 
+Route::get('/cashier/getTable', 'Cashier\CashierController@getTables');

@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <!-- Additional Links Can Be Added Here -->
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,5 +82,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Additional Scripts -->
+    @stack('scripts')
 </body>
 </html>
